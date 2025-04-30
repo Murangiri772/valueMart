@@ -21,6 +21,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.LocationOn
+import androidx.compose.material.icons.filled.MailOutline
 import androidx.compose.material.icons.filled.Notifications
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Button
@@ -54,6 +55,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.lewishr.valuemart.R
+import com.lewishr.valuemart.navigation.ROUT_CHART
+
 import com.lewishr.valuemart.ui.theme.newbrown
 import com.lewishr.valuemart.ui.theme.newwite
 
@@ -83,11 +86,11 @@ fun HomeScreen(navController: NavController){
                                 }
                             )
                             NavigationBarItem(
-                                icon = { Icon(Icons.Default.Favorite, contentDescription = "Favorites") },
+                                icon = { Icon(Icons.Default.MailOutline, contentDescription = "Favorites") },
                                 label = { Text("Favorites") },
                                 selected = selectedIndex == 1,
                                 onClick = { selectedIndex = 1
-                                    // navController.navigate(ROUT_HOME)
+                                     navController.navigate(ROUT_CHART)
                                 }
                             )
                             NavigationBarItem(
