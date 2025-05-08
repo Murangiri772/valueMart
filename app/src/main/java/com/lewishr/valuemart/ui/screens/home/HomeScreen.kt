@@ -56,6 +56,8 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.lewishr.valuemart.R
 import com.lewishr.valuemart.navigation.ROUT_CHART
+import com.lewishr.valuemart.navigation.ROUT_LOCATION
+import com.lewishr.valuemart.navigation.ROUT_MENU
 
 import com.lewishr.valuemart.ui.theme.newbrown
 import com.lewishr.valuemart.ui.theme.newwite
@@ -94,11 +96,11 @@ fun HomeScreen(navController: NavController){
                                 }
                             )
                             NavigationBarItem(
-                                icon = { Icon(Icons.Default.LocationOn, contentDescription = "Profile") },
+                                icon = { Icon(Icons.Default.LocationOn, contentDescription = "Location") },
                                 label = { Text("Locationt") },
                                 selected = selectedIndex == 2,
                                 onClick = { selectedIndex = 2
-                                    //  navController.navigate(ROUT_HOME)
+                                      navController.navigate(ROUT_LOCATION)
                                 }
                             )
                             NavigationBarItem(
@@ -320,6 +322,7 @@ fun HomeScreen(navController: NavController){
 
                             Button(
                                 onClick = {
+                                    navController.navigate(ROUT_MENU)
 
                                 },
                                 colors = ButtonDefaults.buttonColors(Color.DarkGray),

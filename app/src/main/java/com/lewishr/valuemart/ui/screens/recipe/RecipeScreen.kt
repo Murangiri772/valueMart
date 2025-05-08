@@ -17,6 +17,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Notifications
@@ -45,6 +46,8 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import androidx.room.util.TableInfo
 import com.lewishr.valuemart.R
+import com.lewishr.valuemart.navigation.ROUT_HOME
+import com.lewishr.valuemart.navigation.ROUT_MENU
 import com.lewishr.valuemart.ui.theme.newbrown
 import com.lewishr.valuemart.ui.theme.newred
 import com.lewishr.valuemart.ui.theme.newwite
@@ -72,8 +75,8 @@ fun RecipeScreen(navController: NavController){
 
             ),
             navigationIcon = {
-                IconButton(onClick = {}) {
-                    Icon(imageVector = Icons.Default.Menu, contentDescription = "")
+                IconButton(onClick = {navController.navigate(ROUT_MENU)}) {
+                    Icon(imageVector = Icons.Default.ArrowBack, contentDescription = "")
                 }
             },
 

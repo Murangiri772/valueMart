@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.lewishr.valuemart.R
+import com.lewishr.valuemart.navigation.ROUT_HOME
 import com.lewishr.valuemart.ui.theme.newbrown
 import com.lewishr.valuemart.ui.theme.newred
 
@@ -79,6 +80,7 @@ fun StartScreen(navController: NavController){
 
             Button(
                 onClick = {
+                    navController.navigate(ROUT_HOME)
 
                 },
                 colors = ButtonDefaults.buttonColors(Color.DarkGray),

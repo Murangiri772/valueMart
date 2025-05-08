@@ -71,6 +71,22 @@ dependencies {
     // Image Loading (Coil for Jetpack Compose)
     implementation ("io.coil-kt:coil-compose:2.4.0")
 
+    //Live Data
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.4")
+
+
+
+
+    //Google Maps
+    implementation("com.google.accompanist:accompanist-permissions:0.32.0")
+    implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("com.google.android.gms:play-services-location:21.0.1")
+    implementation("com.google.maps.android:maps-compose:2.11.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.6.4")
+
+
+
+
 
 
 
